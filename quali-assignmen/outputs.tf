@@ -1,4 +1,8 @@
 output "bucket_name" {
-  description = "The S3 bucket name created"
-  value       = aws_s3_bucket.leeron-s3.bucket
+  description = "Name of the created S3 bucket"
+  value       = aws_s3_bucket.leeron_bucket.id
+}
+
+output "bucket_arn" {
+  value = aws_s3_bucket.leeron_bucket.arn
 }
